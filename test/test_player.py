@@ -8,7 +8,7 @@ class Test_Player(unittest.TestCase):
     def setUp(self) -> None:
         self.player = Player(_uid="1", _name="Luke")
 
-    def test_initilisation(self):
+    def test_initialisation(self):
 
         self.assertEqual(self.player._uid, "1")
         self.assertEqual(self.player._name, "Luke")

@@ -1,4 +1,4 @@
-class Player(object):
+class Player:
     """
     docstring
     """
@@ -15,4 +15,4 @@ class Player(object):
         return self._name
     
     def __str__(self) -> str:
-        return f"Player name = {self._name} uid = {self._uid}"
+        return f"Player( name = {self._name} uid = {self._uid} )"
