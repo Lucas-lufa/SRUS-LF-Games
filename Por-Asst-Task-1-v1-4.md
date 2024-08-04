@@ -8,7 +8,7 @@ Assessment type ():
 
 ☒ Portfolio
 
-Assessment Resources:
+## Assessment Resources:
 
 Python3 interpreter.
 
@@ -20,7 +20,7 @@ Git and access to GitHub.
 
 Use of some of these items may not occur in this part of the assessment task.
 
-Assessment Due
+## Assessment Due
 
 This item is due:
 
@@ -29,9 +29,9 @@ Refer to Blackboard for most accurate dates, which may alter due to unforeseen c
 
 It is advantageous for you to attempt to meet this deadline.
 
-Assessment Instructions:
+## Assessment Instructions:
 
-Scenario
+## Scenario
 
 You are employed as a junior software developer at a boutique software house called Softwares-R-Us in Perth.
 
@@ -41,7 +41,7 @@ You will be implementing a dynamic data structure (a Double Linked List, to be p
 
 It is expected that the software you create is of a high quality and passes a certain level of testing. You will be provided with guidelines regarding the extent of testing expected of you.
 
-Instructions
+## Instructions
 
 Your code must adhere to certain style guides, the most important being PEP-8 – Style Guide for Python Code. You should familiarise yourself with PEP-8 before continuing as SRU has adopted it as their code style.
 
@@ -55,9 +55,9 @@ You must document your code properly. Use docstrings where needed including but 
 
 If you use any external resources, you should provide references.
 
-Assessment Instrument:
+## Assessment Instrument:
 
-Step 1 – Set up local and remote git repositories
+### Step 1 – Set up local and remote git repositories
 
 In the first step, we set up the project, create a local Git repository and remote Git repository on GitHub. This step has multiple parts to it:
 
@@ -72,7 +72,8 @@ Initialise the project folder as a local Git repository. From the command line, 
 Create a repository on GitHub. Do not have GitHub create additional files like README, LICENSE, etc. Next, set up that repository as the remote for your local repository by following the provided instructions.
 
 Push the local changes to your remote repository.
-Step 2 – Create core class and unit tests
+
+### Step 2 – Create core class and unit tests
 
 In the second step, we’ll create the core class for this task and a few unit tests. This step has multiple parts to it:
 
@@ -87,7 +88,8 @@ Within the folder test, create a file called player_test.py. Add to your local r
 
 Write 2 unit tests that test the behaviour of the class based on its current functionality (i.e., test the properties uid and name).
 Commit all changes, then push them to your remote repository.
-Step 3 – Prepare the Double-Linked List implementation
+
+### Step 3 – Prepare the Double-Linked List implementation
 
 In this step, you’ll be creating the class that will implement the double linked list. This step has multiple parts to it:
 
@@ -97,7 +99,7 @@ Within the file, create a new class called PlayerList. Add an initialiser method
 
 Commit the latest changes to your repository.
 
-Step 4 – Create the Player class
+### Step 4 – Create the Player class
 
 In this step, you’ll be adding a new class that will hold the player object and acts as a node in the linked list. This step has multiple parts to it:
 
@@ -113,7 +115,7 @@ Add a method __str__ to the PlayerNode class, which returns a string representin
 
 Commit the latest changes to your repository and push them to the remote repository.
 
-Step 5 – Implement the Double-Linked List
+### Step 5 – Implement the Double-Linked List
 
 In this step, you will flesh out the implementation of the double linked list called PlayerList. This step has multiple parts to it:
 
@@ -123,7 +125,7 @@ Write unit tests for both situations. Created a file called player_list_test.py 
 
 After implementing the code and the tests, run the tests to ensure your code works according to specifications. Commit the latest changes and push them to your remote repository.
 
-Step 6 – Add code optimisation
+### Step 6 – Add code optimisation
 
 In this step, you’ll do a simple code optimisation that will make working with linked lists easier. In many cases, users of a linked list will want to be able to access it from either the head or the tail. For this purpose, we’ll be adding a new instance variable to point to the tail. This step has multiple parts to it.
 

@@ -22,8 +22,12 @@ class PlayerNode:
         return self._pervious
     
     @next.setter
-    def next(self):
+    def next(self, next):
         self._next = next
+
+    @pervious.setter
+    def pervious(self, pervious):
+        self._pervious = pervious
 
     #creating a new property variable called key
 
