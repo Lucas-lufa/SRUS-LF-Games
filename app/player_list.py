@@ -27,9 +27,4 @@ class Player_List:
         new_node = PlayerNode(player)
 
         if self.is_empty():
-            self._head = new_node
-            return
-
-        new_node.next = self._head
-        self._head.pervious = new_node
-        self.head = new_node
+            self.head = new_node
