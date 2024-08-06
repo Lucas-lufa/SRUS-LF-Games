@@ -16,3 +16,4 @@ class Player:
     
     def __str__(self) -> str:
         return f"Player( name = {self._name} uid = {self._uid} )"
+    
