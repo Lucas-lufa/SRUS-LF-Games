@@ -1,7 +1,7 @@
 import unittest
 
 from app.player import Player
-from app.player_node import PlayerNode
+from app.player_node import Player_Node
 from app.player_list import Player_List
 
 class Test_Player_List(unittest.TestCase):
@@ -13,7 +13,7 @@ class Test_Player_List(unittest.TestCase):
         docstring
         """
         self.player = Player(_uid="1", _name="Luke")
-        self.node = PlayerNode(self.player)
+        self.node = Player_Node(self.player)
         self.player_list = Player_List()
 
     def test_add_node_to_empty_list(self):

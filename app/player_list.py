@@ -1,5 +1,5 @@
 from app.player import Player
-from app.player_node import PlayerNode
+from app.player_node import Player_Node
 
 
 class Player_List:
@@ -24,7 +24,7 @@ class Player_List:
         """
         docstring
         """
-        new_node = PlayerNode(player)
+        new_node = Player_Node(player)
 
         if self.is_empty():
             self._head = new_node

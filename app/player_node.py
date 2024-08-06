@@ -1,7 +1,7 @@
-from player import Player
+from app.player import Player
 
 
-class PlayerNode:
+class Player_Node:
     """_summary_
     """
     def __init__(self, player:Player) -> None:
