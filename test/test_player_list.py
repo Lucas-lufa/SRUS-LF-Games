@@ -20,3 +20,8 @@ class Test_Player_List(unittest.TestCase):
         """
         self.player_list.insert_first(self.player)
         self.assertEqual("1", self.player_list.head.key)
+
+    def test_add_node_to_list(self):
+        self.player = Player("2","John")
+        self.player_list.insert_first(self.player)
+        self.assertEqual("2", self.player_list.head.key)
