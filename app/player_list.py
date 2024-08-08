@@ -8,6 +8,7 @@ class Player_List:
 
     def __init__(self) -> None:
         self._head = None
+        self._tail = None
 
     @property
     def head(self):
@@ -16,6 +17,14 @@ class Player_List:
     @head.setter
     def head(self, head):
         self._head = head
+
+    @property
+    def tail(self):
+        return self._tail
+    
+    @head.setter
+    def tail(self, tail):
+        self._tail = tail
 
     def is_empty(self) -> bool:
         return self._head is None
@@ -28,6 +37,7 @@ class Player_List:
 
         if self.is_empty():
             self._head = new_node
+            self._tail = new_node
             return
 
         new_node.next = self._head

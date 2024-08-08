@@ -135,7 +135,7 @@ Update the code you created in the previous step to update the newly created ins
 
 Commit your changes and push them to your remote repository on GitHub.
 
-Step 7 – Add functionality to Double-Linked List
+### Step 7 – Add functionality to Double-Linked List
 
 In this step, you’ll be adding some more functionality to the linked list. 
 
