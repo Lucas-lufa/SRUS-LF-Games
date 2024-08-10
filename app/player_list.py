@@ -30,16 +30,32 @@ class Player_List:
         return self._head is None
     
     def insert_first(self, player: Player):
-        """
-        docstring
+        """_summary_
+
+        Args:
+            player (Player): _description_
         """
         new_node = Player_Node(player)
 
         if self.is_empty():
             self._head = new_node
             self._tail = new_node
-            return
+        else:
+            new_node.next = self._head
+            self._head.pervious = new_node
+            self.head = new_node
 
-        new_node.next = self._head
-        self._head.pervious = new_node
-        self.head = new_node
+    def insert_last(self, player:Player):
+        """_summary_
+
+        Args:
+            player (Player): _description_
+        """
+        new_node = Player_Node(player)
+
+        if self.is_empty():
+            self._head = new_node
+            self._tail = new_node
+        else:
+            new_node.pervious = self._tail
+            self._tail = new_node
