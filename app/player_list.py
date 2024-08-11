@@ -59,3 +59,32 @@ class Player_List:
         else:
             new_node.pervious = self._tail
             self._tail = new_node
+
+    def delete_key(self, uid:str="", headTail:str="head"):
+        """_summary_
+
+        Args:
+            uid (str): _description_
+        """
+        if self._head == self.tail:
+            self._head = None
+            self._tail = None
+            
+        if headTail == "head":
+            node = self._head
+            while node != None:
+                
+                
+            if node.key == uid:
+                pervious = node.pervious
+                next = node.next
+                if pervious is not None:
+                    pervious.next = next
+                if next is not None:
+                    next.pervious = pervious
+
+                    
+
+
+
+    
