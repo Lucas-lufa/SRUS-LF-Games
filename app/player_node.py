@@ -4,8 +4,8 @@ from app.player import Player
 class Player_Node:
     """_summary_
     """
-    def __init__(self, player:Player) -> None:
-        self._player = player
+    def __init__(self) -> None:
+        self._player = None
         self._next = None
         self._pervious = None
 

@@ -11,7 +11,7 @@ class Test_Player_List(unittest.TestCase):
         """
         docstring
         """
-        self.player = Player(_uid="1", _name="Luke")
+        self.player = Player("1", "Luke")
         self.player_list = Player_List()
 
     def test_add_node_to_empty_list_insert_first(self):
@@ -30,13 +30,17 @@ class Test_Player_List(unittest.TestCase):
         """
         docstring
         """
-        self.player_list.tail = None
-        self.player_list.head = None
-
-        self.player_list.insert_last(self.player)
-        self.assertEqual("1", self.player_list.tail.key)
+        self.player_list = Player_List()
+        player = Player("2","John")
+        self.player_list.insert_last(player)
+        self.assertEqual("2", self.player_list.head.key)
+        self.assertEqual("2", self.player_list.tail.key)
 
     def test_add_node_to_list_insert_last(self):
         player = Player("2","John")
+        self.player_list.insert_last(self.player)
         self.player_list.insert_last(player)
+        self.assertEqual("1", self.player_list.head.key)
         self.assertEqual("2", self.player_list.tail.key)
+
+    

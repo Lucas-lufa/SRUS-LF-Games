@@ -35,7 +35,7 @@ class Player_List:
         Args:
             player (Player): _description_
         """
-        new_node = Player_Node(player)
+        new_node = Player_Node()
 
         if self.is_empty():
             self._head = new_node
@@ -51,12 +51,13 @@ class Player_List:
         Args:
             player (Player): _description_
         """
-        new_node = Player_Node(player)
+        new_node = Player_Node()
 
         if self.is_empty():
             self._head = new_node
             self._tail = new_node
-        else:
+
+        if self._tail is not None:
             new_node.pervious = self._tail
             self._tail = new_node
 
@@ -67,6 +68,9 @@ class Player_List:
             node = self._head
             self._head = node.next
             del node
+
+    def delete_tail(self):
+        pass
 
     def delete_key(self, uid:str="", headTail:str="head"):
         """_summary_
@@ -92,7 +96,10 @@ class Player_List:
                     break
                 node = node.next
                 
-            
+
+
+
+
 
                     
 
