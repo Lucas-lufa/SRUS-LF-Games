@@ -4,13 +4,17 @@ from app.player import Player
 class Player_Node:
     """_summary_
     """
-    def __init__(self) -> None:
-        self._player = None
+    def __init__(self, player:Player) -> None:
+        self._player = player
         self._next = None
         self._pervious = None
 
     @property
     def player(self):
+        return self._player
+    
+    @player.setter
+    def player(self, player):
         return self._player
 
     @property

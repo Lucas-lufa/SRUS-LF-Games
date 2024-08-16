@@ -26,6 +26,7 @@ class Test_Player_List(unittest.TestCase):
         self.player_list.insert_first(player)
         self.assertEqual("2", self.player_list.head.key)
 
+
     def test_add_node_to_empty_list_insert_last(self):
         """
         docstring

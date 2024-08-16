@@ -22,7 +22,7 @@ class Player_List:
     def tail(self):
         return self._tail
     
-    @head.setter
+    @tail.setter
     def tail(self, tail):
         self._tail = tail
 
@@ -35,7 +35,7 @@ class Player_List:
         Args:
             player (Player): _description_
         """
-        new_node = Player_Node()
+        new_node = Player_Node(player)
 
         if self.is_empty():
             self._head = new_node
@@ -43,7 +43,7 @@ class Player_List:
         else:
             new_node.next = self._head
             self._head.pervious = new_node
-            self.head = new_node
+            self._head = new_node
 
     def insert_last(self, player:Player):
         """_summary_
@@ -51,13 +51,13 @@ class Player_List:
         Args:
             player (Player): _description_
         """
-        new_node = Player_Node()
+        new_node = Player_Node(player)
 
         if self.is_empty():
             self._head = new_node
             self._tail = new_node
-
-        if self._tail is not None:
+        else:
+            self.tail.next = new_node
             new_node.pervious = self._tail
             self._tail = new_node
 
