@@ -159,7 +159,7 @@ Add a unit test that covers this use case.
 
 Commit your changes and push all the latest changes to your remote repository on GitHub.
 
-Step 8 – Show entire list
+### Step 8 – Show entire list
 
 In the final step of this assessment, you’ll add functionality to show the entire list. This step has multiple parts to it:
 

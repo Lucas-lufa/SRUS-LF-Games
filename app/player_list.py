@@ -62,15 +62,26 @@ class Player_List:
             self._tail = new_node
 
     def delete_head(self):
+        if self.is_empty():
+            return
         if self._head == self._tail:
             self._head = None
+            self._tail = None
         else:
             node = self._head
             self._head = node.next
             del node
 
     def delete_tail(self):
-        pass
+        if self.is_empty():
+            return
+        if self._head == self._tail:
+            self._head = None
+            self._tail = None
+        else:
+            node = self._tail
+            self._tail = self.tail.pervious
+            del node
 
     def delete_key(self, uid:str="", headTail:str="head"):
         """_summary_
