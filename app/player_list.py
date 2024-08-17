@@ -92,11 +92,18 @@ class Player_List:
         if self._head == self.tail:
             self._head = None
             self._tail = None
+            return
             
         if headTail == "head":
             node = self._head
             while node is not None:
-                if node.key == uid:
+                if node.key == uid:                    
+                    if node == self._head:
+                        self.delete_head()
+                        break
+                    if node == self._tail:
+                        self.delete_tail()
+                        break
                     pervious = node.pervious
                     next = node.next
                     if pervious is not None:

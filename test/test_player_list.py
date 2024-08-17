@@ -14,6 +14,7 @@ class Test_Player_List(unittest.TestCase):
         self.player = Player("1", "Luke")
         self.player_list = Player_List()
 
+
     def test_add_node_to_empty_list_insert_first(self):
         """
         docstring
@@ -23,6 +24,7 @@ class Test_Player_List(unittest.TestCase):
 
     def test_add_node_to_list_insert_first(self):
         player = Player("2","John")
+        self.player_list.insert_first(self.player)
         self.player_list.insert_first(player)
         self.assertEqual("2", self.player_list.head.key)
 
@@ -44,4 +46,42 @@ class Test_Player_List(unittest.TestCase):
         self.assertEqual("1", self.player_list.head.key)
         self.assertEqual("2", self.player_list.tail.key)
 
-    
+
+    def test_delete_head(self):
+        self.player_list.insert_first(self.player)
+        player = Player("2","John")
+        self.player_list.insert_first(player)
+        self.player_list.delete_head()
+        self.assertEqual(self.player, self.player_list._head.player)
+
+    def test_delete_head_is_empty(self):
+        pass
+
+    def test_delete_head_one_node(self):
+        self.player_list.delete_head()
+        self.assertEqual(self.player_list.head, None)
+
+    def test_delete_tail(self):
+        self.player_list.insert_first(self.player)
+        player = Player("2","John")
+        self.player_list.insert_last(player)
+        self.player_list.delete_tail()
+        self.assertEqual("1", self.player_list.tail.key)
+
+    def test_delete_tail_is_empty(self):
+        pass
+
+    def test_delete_tail_one_node(self):
+        self.player_list.delete_head()
+        self.assertEqual(self.player_list.head, None)
+
+    def test_delete_key(self):
+        self.player_list.insert_first(self.player)
+        player = Player("2","John")
+        self.player_list.insert_first(player)
+        player = Player("3","Fad")
+        self.player_list.insert_first(player)
+
+        self.player_list.delete_key('3')
+
+        self.assertEqual(self.player_list.head.key, '2' )
