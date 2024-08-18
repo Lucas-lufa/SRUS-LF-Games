@@ -113,8 +113,20 @@ class Player_List:
                     del node
                     break
                 node = node.next
-                
 
+    def display(self, forward:bool = True):
+        if self.is_empty():
+            print("Player list is empty.")
+        if forward:
+            node = self._head
+            while node is not None:
+                print(f"{node}")
+                node = node.next
+        else:
+            node = self._tail
+            while node is not None:
+                print(f"{node}")
+                node = node.pervious
 
 
 
