@@ -1,6 +1,5 @@
 class Player:
-    """
-    docstring
+    """Holds the detail of the player
     """
     def __init__(self, _uid:str, _name:str) -> None:
         self._uid = _uid

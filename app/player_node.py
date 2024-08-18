@@ -2,7 +2,8 @@ from app.player import Player
 
 
 class Player_Node:
-    """_summary_
+    """Contains a player instance.
+    Controls the next and previous for the link list.
     """
     def __init__(self, player:Player) -> None:
         self._player = player
@@ -33,7 +34,6 @@ class Player_Node:
     def pervious(self, pervious):
         self._pervious = pervious
 
-    #creating a new property variable called key
 
     @property
     def key(self):

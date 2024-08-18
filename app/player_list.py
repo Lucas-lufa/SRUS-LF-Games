@@ -3,7 +3,8 @@ from app.player_node import Player_Node
 
 
 class Player_List:
-    """_summary_
+    """Manages the double link list.
+    Contains Player_Node instances
     """
 
     def __init__(self) -> None:
@@ -27,13 +28,19 @@ class Player_List:
         self._tail = tail
 
     def is_empty(self) -> bool:
+        """Checks to see if list is empty.
+
+        Returns:
+            bool: if the head has an object, truthy or is None, falsy.
+        """
         return self._head is None
     
     def insert_first(self, player: Player):
-        """_summary_
+        """Inserts a node at the head of the list.
 
         Args:
-            player (Player): _description_
+            player (Player): A Player instance is pass to the Player_Node on creation of one of it's instance.
+            Then inserts the instance in the appropriate location.
         """
         new_node = Player_Node(player)
 
@@ -46,10 +53,11 @@ class Player_List:
             self._head = new_node
 
     def insert_last(self, player:Player):
-        """_summary_
+        """Inserts a node at he tail of the list.
 
         Args:
-            player (Player): _description_
+            player (Player): player (Player): A Player instance is pass to the Player_Node on creation of one of it's instance.
+            Then inserts the instance in the appropriate location.
         """
         new_node = Player_Node(player)
 
@@ -62,6 +70,9 @@ class Player_List:
             self._tail = new_node
 
     def delete_head(self):
+        """Delete the head node.
+        It will delete the list if there is only one node.
+        """
         if self.is_empty():
             return
         if self._head == self._tail:
@@ -73,6 +84,9 @@ class Player_List:
             del node
 
     def delete_tail(self):
+        """Deletes the tail node.
+        It will delete the list if there is only one node.
+        """
         if self.is_empty():
             return
         if self._head == self._tail:
@@ -84,10 +98,12 @@ class Player_List:
             del node
 
     def delete_key(self, uid:str="", headTail:str="head"):
-        """_summary_
+        """Deletes node via the key.
 
         Args:
-            uid (str): _description_
+            uid (str, optional): key for the node. Defaults to "".
+            headTail (str, optional): Sets the direction to search from. Defaults to "head".
+            TODO Implement tail direction.
         """
         if self._head == self.tail:
             self._head = None
@@ -115,6 +131,11 @@ class Player_List:
                 node = node.next
 
     def display(self, forward:bool = True):
+        """Prints each node in the list
+
+        Args:
+            forward (bool, optional): Control direction of printing, True head to tail. Defaults to True.
+        """
         if self.is_empty():
             print("Player list is empty.")
         if forward:
