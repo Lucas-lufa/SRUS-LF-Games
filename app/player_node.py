@@ -40,5 +40,8 @@ class Player_Node:
         return self._player.uid
     
     def __str__(self) -> str:
-        return f"{self._player} next= {self._next} pervious= {self._pervious}"
+        return f"{self._player}"
+
+    def __repr__(self) -> str:
+        return f"{self._player} next= {self._next!r} pervious= {self._pervious!r}"
     
