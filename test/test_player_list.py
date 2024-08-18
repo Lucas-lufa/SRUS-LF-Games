@@ -75,3 +75,13 @@ class Test_Player_List(unittest.TestCase):
         self.player_list.delete_head()
         self.assertEqual(self.player_list.head, None)
 
+    def test_delete_key(self):
+        self.player_list.insert_first(self.player)
+        player = Player("2","John")
+        self.player_list.insert_first(player)
+        player = Player("3","Fad")
+        self.player_list.insert_first(player)
+
+        self.player_list.delete_key('3')
+
+        self.assertEqual(self.player_list.head.key, '2' )
