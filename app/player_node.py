@@ -23,6 +23,18 @@ class Player_Node:
         return self._next
     
     @property
+    def next_print(self):
+        if self._next is None:
+            return "None"
+        return self._next._player.__str__()
+    
+    @property
+    def pervious_print(self):
+        if self._pervious is None:
+            return "None"
+        return self._pervious._player.__str__()
+    
+    @property
     def pervious(self):
         return self._pervious
     
@@ -40,8 +52,5 @@ class Player_Node:
         return self._player.uid
     
     def __str__(self) -> str:
-        return f"{self._player}"
-
-    def __repr__(self) -> str:
-        return f"{self._player} next= {self._next!r} pervious= {self._pervious!r}"
+        return f"{self._player} next= {self.next_print} pervious= {self.pervious_print}"
     
