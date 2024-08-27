@@ -196,24 +196,37 @@ If you use any external resources, you should provide references.
 
 In your own words, describe what hashing is in general.
 
+Hashing is taking data and making a number from it. If you put the same data in you will get the same number out. It is a one way operation.
+
 ## Step 2 – Knowledge Question (60-100 words)
 
 Research hashing algorithms. Describe advantages and disadvantages for at least three different hashing algorithms. Please provide references for external resources.
 
 ## Step 3 – Knowledge Question (50-90 words)
 
-Provide a stepwise description (algorithmic) of a) how you can store a password safely using hashing techniques and b) how you can verify that some string is the right password?
+Provide a stepwise description (algorithmic) of 
+a) how you can store a password safely using hashing techniques and 
+b) how you can verify that some string is the right password?
 
 ## Step 4 – Knowledge Question (20-40 words)
 
 What is the purpose of a “salt” when hashing a password? What are the two most important properties of a “salt”?
+
+Salt is additional random data feed into a one way hashing algorithm that hashes passwords or pass phrases. The salt makes guessing the password or pass phrases from the hash alot harder.
 
 ## Step 5 – Add password to Player class
 
 In this step, you will be adding functionality to the Player class to store a password in a safe manner. This step has multiple parts to it.
 
     -Install the external package argon2-cffi from pypi using pip or your IDE. Document how you installed this package.
+
+    I installed the package inside a python virtual environment with pip
+    pip install argon2-cffi
+
     -Read the documentation for this package to understand what this package has to offer.
+    https://argon2-cffi.readthedocs.io/en/stable/argon2.html
+
+
     -Add a method add_password to the Player class. It should accept a single argument (a string), which is the plaintext password. Determine which function to use from the argon2 package and implement the function to calculate a hashed version of the password. Store this value in a private instance variable. Do not create a property for this value. You may have to initialise this instance variable in the initialiser method.
     -Add a method verify_password to the Player class. It should also accept a single argument (a string), which is the plaintext password which should be checked, and return a Boolean indicating whether there is a match. -Implement this method to verify that the provided password matches the stored password.
     -Create at least two unit tests to check whether your implementations work correctly.
