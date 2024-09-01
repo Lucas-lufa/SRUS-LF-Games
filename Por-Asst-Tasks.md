@@ -196,11 +196,17 @@ If you use any external resources, you should provide references.
 
 In your own words, describe what hashing is in general.
 
-Hashing is taking data and making a number from it. If you put the same data in you will get the same number out. It is a one way operation.
+Hashing is taking data and making a number from it. If you put the same data in you will get the same number out. It is a one way operation. There are a few use cases but can be split into cryptography and non-cryptography. Cryptography is used for passwords. Non-cryptography is used to identified file to confirm a file hasn't changed, to retrieve a file in a array and can be used to find out if part of a set or not. 
 
 ## Step 2 – Knowledge Question (60-100 words)
 
-Research hashing algorithms. Describe advantages and disadvantages for at least three different hashing algorithms. Please provide references for external resources.
+Research hashing algorithms. Describe advantages and disadvantages for at least three different hashing algorithms. Please provide references for external resources. 
+
+md5
+
+argon2
+
+
 
 ## Step 3 – Knowledge Question (50-90 words)
 
@@ -228,7 +234,8 @@ In this step, you will be adding functionality to the Player class to store a pa
 
 
     -Add a method add_password to the Player class. It should accept a single argument (a string), which is the plaintext password. Determine which function to use from the argon2 package and implement the function to calculate a hashed version of the password. Store this value in a private instance variable. Do not create a property for this value. You may have to initialise this instance variable in the initialiser method.
-    -Add a method verify_password to the Player class. It should also accept a single argument (a string), which is the plaintext password which should be checked, and return a Boolean indicating whether there is a match. -Implement this method to verify that the provided password matches the stored password.
+    -Add a method verify_password to the Player class. It should also accept a single argument (a string), which is the plaintext password which should be checked, and return a Boolean indicating whether there is a match. 
+    -Implement this method to verify that the provided password matches the stored password.
     -Create at least two unit tests to check whether your implementations work correctly.
     -Commit your changes and push to your remote GitHub repository.
     -Answer the question “How does the argon2-cffi package handle salt?”
