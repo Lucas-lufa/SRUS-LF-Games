@@ -19,3 +19,17 @@ class Test_Player(unittest.TestCase):
     def test_name_property(self):
         self.assertEqual(self.player.name, "Luke")
 
+    def test_verify_password_None(self):
+        self.assertFalse(self.player.verify_password(''))
+
+    def test_add_password(self):
+        self.player.add_password('password')
+        self.assertIsNotNone(self.player._password_hash)
+
+    def test_verify_password_false(self):
+        self.player.add_password('password')
+        self.assertFalse(self.player.verify_password('1'))
+
+    def test_verify_password_true(self):
+        self.player.add_password('password')
+        self.assertTrue(self.player.verify_password('password'))
