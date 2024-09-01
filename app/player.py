@@ -20,6 +20,10 @@ class Player:
         password = PasswordHasher()
         self._password_hash = password.hash(word)
     
+    def verify_password(self, word:str) -> bool:
+        password = PasswordHasher()
+        return password.verify(self._password_hash, word)
+
     def __str__(self) -> str:
         #return f"Player( name = {self._name} uid = {self._uid})"
         return f"Player( name = {self._name} uid = {self._uid} password hash = {self._password_hash})"
