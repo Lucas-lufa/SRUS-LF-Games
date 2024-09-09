@@ -6,9 +6,9 @@ class Player:
     """Holds the detail of the player
     """
     def __init__(self, _uid:str, _name:str) -> None:
-        self._uid = _uid
-        self._name = _name
-        self._password_hash = None
+        self._uid:str = _uid
+        self._name:str = _name
+        self._password_hash:str = None
 
     @property
     def uid(self) -> str:

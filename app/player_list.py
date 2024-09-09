@@ -8,8 +8,8 @@ class Player_List:
     """
 
     def __init__(self) -> None:
-        self._head = None
-        self._tail = None
+        self._head:Player_Node = None
+        self._tail:Player_Node = None
 
     @property
     def head(self):

@@ -6,9 +6,9 @@ class Player_Node:
     Controls the next and previous for the link list.
     """
     def __init__(self, player:Player) -> None:
-        self._player = player
-        self._next = None
-        self._pervious = None
+        self._player:Player = player
+        self._next:Player_Node = None
+        self._pervious:Player_Node = None
 
     @property
     def player(self):
