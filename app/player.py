@@ -9,7 +9,13 @@ class Player:
         self._uid:str = _uid
         self._name:str = _name
         self._password_hash:str = None
-        self._score:int = None
+        self._score:int = 0
+
+    def __lt__(self, other) -> bool:
+        return self.score < other.score
+
+    def __eq__(self, other) -> bool:
+        return self.score == other.score
 
     @property
     def uid(self) -> str:
@@ -24,7 +30,7 @@ class Player:
         return self._score
     
     @score.setter
-    def score(self, score):
+    def score(self, score:int):
         self._score += score
     
     def add_password(self, word:str) -> None:

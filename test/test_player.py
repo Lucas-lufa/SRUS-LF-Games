@@ -7,6 +7,7 @@ class Test_Player(unittest.TestCase):
 
     def setUp(self) -> None:
         self.player = Player(_uid="1", _name="Luke")
+        self.playerOne = Player(_uid="2", _name="John")
 
     def test_initialisation(self):
 
@@ -33,3 +34,23 @@ class Test_Player(unittest.TestCase):
     def test_verify_password_true(self):
         self.player.add_password('password')
         self.assertTrue(self.player.verify_password('password'))
+
+    def test_lt_true(self):
+        self.player.score = 1
+        self.playerOne.score = 2
+        self.assertTrue(self.player < self.playerOne)
+
+    def test_lt_false(self):
+        self.player.score = 2
+        self.playerOne.score = 1
+        self.assertFalse(self.player < self.playerOne)
+
+    def test_eq_true(self):
+        self.player.score = 1
+        self.playerOne.score = 1
+        self.assertTrue(self.player == self.playerOne)
+
+    def test_eq_false(self):
+        self.player.score = 1
+        self.playerOne.score = 2
+        self.assertFalse(self.player == self.playerOne)    
