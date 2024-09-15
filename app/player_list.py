@@ -97,6 +97,36 @@ class Player_List:
             self._tail = self.tail.pervious
             del node
 
+    def find_by_key(self, uid:str="", headTail:str="head"):
+        """Finds node via the key.
+
+        Args:
+            uid (str, optional): key for the node. Defaults to "".
+            headTail (str, optional): Sets the direction to search from. Defaults to "head".
+            TODO Implement tail direction.
+        """
+        if self._head == self.tail:
+            self._head = None
+            self._tail = None
+            return
+            
+        if headTail == "head":
+            node = self._head
+            while node is not None:
+                if node.key == uid:                    
+                    if node == self._head:
+                        return node
+                    if node == self._tail:
+                        return node
+                    pervious = node.pervious
+                    next = node.next
+                    if pervious is not None:
+                        pervious.next = next
+                    if next is not None:
+                        next.pervious = pervious
+                    return node
+                node = node.next
+
     def delete_key(self, uid:str="", headTail:str="head"):
         """Deletes node via the key.
 

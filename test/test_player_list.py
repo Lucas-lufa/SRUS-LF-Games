@@ -85,3 +85,6 @@ class Test_Player_List(unittest.TestCase):
         self.player_list.delete_key('3')
 
         self.assertEqual(self.player_list.head.key, '2' )
+
+    def test_find_by_key(self):
+        pass
