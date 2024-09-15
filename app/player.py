@@ -9,6 +9,7 @@ class Player:
         self._uid:str = _uid
         self._name:str = _name
         self._password_hash:str = None
+        self._score:int = None
 
     @property
     def uid(self) -> str:
@@ -17,6 +18,14 @@ class Player:
     @property
     def name(self) -> str:
         return self._name
+    
+    @property
+    def score(self) -> int:
+        return self._score
+    
+    @score.setter
+    def score(self, score):
+        self._score += score
     
     def add_password(self, word:str) -> None:
         password = PasswordHasher()
