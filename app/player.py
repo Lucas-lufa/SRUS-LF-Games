@@ -2,6 +2,8 @@ from argon2 import PasswordHasher
 import argon2
 import argon2.exceptions
 
+from app.player_list import Player_List
+
 class Player:
     """Holds the detail of the player
     """
@@ -46,8 +48,29 @@ class Player:
         except AttributeError:
             return False
 
+    @staticmethod
+    def make_list(self, player_list:Player_List):
+        players = []
+        if player_list.head is not None:
+            node = self._head
+            while node is not None:
+                players.append(node.player)
+                node = node.next
+
+        return players
+    
+    @staticmethod
+    def player_sort(self, player_list:list):
+        """Makes a sorted list from a linked list using score
+
+        Args:
+            Linked list to make the list
+        """
+        
+
+            
+        
     def __str__(self) -> str:
         return f"Player( name = {self._name} uid = {self._uid})"
-        # return f"Player( name = {self._name} uid = {self._uid} password hash = {self._password_hash})"
     
     
