@@ -60,13 +60,57 @@ class Player:
         return players
     
     @staticmethod
-    def player_sort(self, player_list:list):
+    def partition(self, players:list, low, hight):
+        if len(players) <= 1:
+            return 
+        
+
+
+        
+
+    
+    @staticmethod
+    def player_sort(self, players:list):
         """Makes a sorted list from a linked list using score
 
         Args:
             Linked list to make the list
         """
+        def partition(self, player, low, high):
+            i = players[low]
+            j = players[high]
+
+            pivot = players[low]
+            
+            while low < high:
+                if players[i] < players[pivot]:
+                    low =+ 1
+
+                if players[j] > players[pivot]:
+                    high =- 1
+
+                if players[i] < pivot and players[j] > pivot:
+                    (players[i], players[j]) = (players[j], players[i])
+
+            (players[i], players[pivot]) = (players[pivot], players[i])
+
+            return pivot
+
+        def quick_sort(self, player, low, high):
+            
+            
+            pivot = Player.player_sort.partition(low, high)
+
+
+
+
+            
+
+
+                
         
+
+
 
             
         
