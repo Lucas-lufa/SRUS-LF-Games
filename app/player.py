@@ -2,7 +2,7 @@ from argon2 import PasswordHasher
 import argon2
 import argon2.exceptions
 
-from app.player_list import Player_List
+#from app.player_list import Player_List
 
 class Player:
     """Holds the detail of the player
@@ -14,10 +14,13 @@ class Player:
         self._score:int = 0
 
     def __lt__(self, other) -> bool:
-        return self.score < other.score
+        return self._score < other.score
 
     def __eq__(self, other) -> bool:
-        return self.score == other.score
+        return self._score == other.score
+    
+    def __gt__(self, other) -> bool:
+        return self._score > other.score
 
     @property
     def uid(self) -> str:
@@ -49,10 +52,10 @@ class Player:
             return False
 
     @staticmethod
-    def make_list(self, player_list:Player_List):
+    def make_list(player_list):
         players = []
         if player_list.head is not None:
-            node = self._head
+            node = player_list._head
             while node is not None:
                 players.append(node.player)
                 node = node.next
@@ -60,48 +63,68 @@ class Player:
         return players
     
     @staticmethod
-    def partition(self, players:list, low, hight):
-        if len(players) <= 1:
-            return 
+    def partition(players, i, j):
+        """_summary_
+        https://youtu.be/7h1s2SojIRw?si=CkL1_j2xALGK_wQC&t=723
+
+        Args:
+            players (_type_): _description_
+            i (_type_): _description_
+            j (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
+
+        pivot = i
         
+        while i < j:
+            # low = players[i] 
+            # high = players[j] 
+            # pivotValue = players[pivot]
+            
+            # i pointer is looking for smaller than pivot. if doesn't find will increment pointer
+            while True:
+                i+=1
+                if players[pivot] > players[i]:
+                    break
 
+            # j pointer looks for larger than pivot, if doesn't find will increment pointer
+            while True:
+                j-=1
+                if players[pivot] < players[j] or players[pivot] == players[j]:
+                    if i < j:                    
+                     (players[i], players[j]) = (players[j], players[i])
+                    break
+            
+        (players[j], players[pivot]) = (players[pivot], players[j])
 
-        
-
+        return j
     
     @staticmethod
-    def player_sort(self, players:list):
+    def quick_sort(players, low, high):
+        if (len(players[low:high]) <= 1):
+            return
+
+        pivot = Player.partition(players, low, high)
+        
+        Player.quick_sort(players, low, pivot)
+        Player.quick_sort(players, pivot + 1, high)
+            
+    @staticmethod
+    def player_sort(players:list):
         """Makes a sorted list from a linked list using score
 
         Args:
             Linked list to make the list
         """
-        def partition(self, player, low, high):
-            i = players[low]
-            j = players[high]
 
-            pivot = players[low]
-            
-            while low < high:
-                if players[i] < players[pivot]:
-                    low =+ 1
+        # players = Player.make_list() //for now make sure other works than this.
 
-                if players[j] > players[pivot]:
-                    high =- 1
+        Player.quick_sort(players, 0, len(players)-1)
+        
 
-                if players[i] < pivot and players[j] > pivot:
-                    (players[i], players[j]) = (players[j], players[i])
-
-            (players[i], players[pivot]) = (players[pivot], players[i])
-
-            return pivot
-
-        def quick_sort(self, player, low, high):
-            
-            
-            pivot = Player.player_sort.partition(low, high)
-
-
+        
 
 
             
