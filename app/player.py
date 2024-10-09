@@ -110,32 +110,6 @@ class Player:
         
         Player.quick_sort(players, low, pivot)
         Player.quick_sort(players, pivot + 1, high)
-            
-    @staticmethod
-    def player_sort(players:list):
-        """Makes a sorted list from a linked list using score
-
-        Args:
-            Linked list to make the list
-        """
-
-        # players = Player.make_list() //for now make sure other works than this.
-
-        Player.quick_sort(players, 0, len(players)-1)
-        
-
-        
-
-
-            
-
-
-                
-        
-
-
-
-            
         
     def __str__(self) -> str:
         return f"Player( name = {self._name} uid = {self._uid})"
