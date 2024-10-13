@@ -76,24 +76,29 @@ In your own words, describe how an algorithm to find an item in a Binary Search 
 Step 3 – Knowledge Question (20-60 words)
 In your own words, describe what a balanced BST is.
 
-Step 4 – Prepare Binary Search Tree
+### Step 4 – Prepare Binary Search Tree
 In this step, you will create the framework for a Binary Search Tree of Player objects. This step has
 multiple parts to it:
-a. Add a new file to the folder app called player_bst.py. This will contain the class that is the Binary
-Search Tree.
-b. Create a class called PlayerBST in the file you just created. Within that class, create the initialiser
-method and create an instance variable that will contain the root of the search tree. Set that variable
-to None, initially. Create a property for it.
-c. Add the file to your local repository without committing yet.
-d. Add a new file to the folder app called player_bnode.py. This will contain the class that holds each
-node in the BST.
-e. Create a class called PlayerBNode in the file you just created. Create an initialiser method that accept
-one argument: player. It should assign that value to a private instance variable. Create a property for
-that value too. Add two more private instance variable: one that points to the left sub-tree and one
-that points to the right sub-tree. Initialise those variables with None. Create getters (or properties) and
-setters for these values.
-f. Add the new file to your local repository.
-g. Commit all files and push the latest changes to your remote repository on GitHub.
+a. 
+Add a new file to the folder app called player_bst.py. This will contain the class that is the Binary Search Tree.
+
+b.
+Create a class called PlayerBST in the file you just created. Within that class, create the initialiser method and create an instance variable that will contain the root of the search tree. Set that variable to None, initially. Create a property for it.
+
+c.
+Add the file to your local repository without committing yet.
+
+d.
+Add a new file to the folder app called player_bnode.py. This will contain the class that holds each node in the BST.
+
+e.
+Create a class called PlayerBNode in the file you just created. Create an initialiser method that accept one argument: player. It should assign that value to a private instance variable. Create a property for that value too. Add two more private instance variable: one that points to the left sub-tree and one that points to the right sub-tree. Initialise those variables with None. Create getters (or properties) and setters for these values.
+
+f.
+Add the new file to your local repository.
+
+g.
+Commit all files and push the latest changes to your remote repository on GitHub.
 
 Step 5 – Insert Player in Binary Search Tree
 In this step, you will create the code to insert Player objects into the BST. This step has multiple
