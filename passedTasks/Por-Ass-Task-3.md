@@ -99,3 +99,23 @@ Add unit tests to test the new sorting functionality.
 Add and commit all changes, then push your changes to the remote repository on GitHub
 
 https://meta.stackexchange.com/questions/226869/how-can-i-add-the-mathematical-symbol-for-power-like-x-2-to-a-question
+
+
+### feedback
+Hi Lukas, 
+
+Thanks for your submission. Here is my feedback: 
+
+You have answered all KBA questions, including the one in Step 4. Good job! 
+
+You correctly added the setter and getter methods for the score property. You initialized score at 0 and inside the setter method you specified score += score. However, it will not prevent of entering a negative number. In the instruction, it clearly states that the score must be a positive number. 
+
+You included three comparison operators. 
+
+Your test designs are nice. However, the last test case does not test the quick_sort() method. One of the parameters of the assert method must be the quick_sort(). Instead, you manually prepared a sorted and unsorted list and checked if they are equal or not. 
+
+You need to address a few things. Kindly fix it and resubmit your work. Keep doing your good work! 
+
+Thanks  
+
+Tanmay 
