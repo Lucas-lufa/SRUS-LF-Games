@@ -101,26 +101,14 @@ g.
 Commit all files and push the latest changes to your remote repository on GitHub.
 
 Step 5 – Insert Player in Binary Search Tree
-In this step, you will create the code to insert Player objects into the BST. This step has multiple
-parts to it:
-Portfolio Assessment Task 4
-Qualification national code and title ICT50220 Dip Advanced Programming
-Unit/s national code/s and title/s ICTPRG535 – Build advanced user interfaces
-ICTPRG547 – Apply advanced programming skills in another language
-RTO Code 52786 CRICOS Code: 00020G Current Template Version: February 2020
-Assessment task last updated: 29-07-21
-Folder location: Por-Asst-Task-4 v1.4.docx Page 4 of 5
-F122A12
-Uncontrolled Copy When Printed
-a. Add a method called insert to the PlayerBST class. It should take a Player object as the only
-argument. Please note that it should use the Player object’s name property as the key, since we want
-to search by name.
+In this step, you will create the code to insert Player objects into the BST. This step has multiple parts to it:
+a. Add a method called insert to the PlayerBST class. It should take a Player object as the only argument. Please note that it should use the Player object’s name property as the key, since we want to search by name.
 b. Implement the function (recursively) so it follows the rules of the BST:
-1. The left subtree of a node contains only nodes with keys less than the node’s key
-2. The right subtree of a node contains only nodes with keys greater than the node’s key
-3. The left and the right subtree themselves must also be Binary Search Trees
-4. There must not be duplicate nodes (if a node with a key already exists, you may update the
-value/item – which is a Player object – of that key.)
+ 1. The left subtree of a node contains only nodes with keys less than the node’s key
+ 2. The right subtree of a node contains only nodes with keys greater than the node’s key
+ 3. The left and the right subtree themselves must also be Binary Search Trees
+ 4. There must not be duplicate nodes (if a node with a key already exists, you may update the value/item – which is a Player object – of that key.)
+
 c. Create unit tests to test the behaviour of the BST’s insert method.
 d. Commit your changes and push them to your remote repository on GitHub.
 
