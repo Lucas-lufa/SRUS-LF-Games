@@ -103,6 +103,7 @@ Commit all files and push the latest changes to your remote repository on GitHub
 Step 5 – Insert Player in Binary Search Tree
 In this step, you will create the code to insert Player objects into the BST. This step has multiple parts to it:
 a. Add a method called insert to the PlayerBST class. It should take a Player object as the only argument. Please note that it should use the Player object’s name property as the key, since we want to search by name.
+https://stackoverflow.com/questions/53057724/taking-the-ord-function-from-a-string-and-returning-the-sum
 b. Implement the function (recursively) so it follows the rules of the BST:
  1. The left subtree of a node contains only nodes with keys less than the node’s key
  2. The right subtree of a node contains only nodes with keys greater than the node’s key
