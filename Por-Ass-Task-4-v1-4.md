@@ -115,8 +115,7 @@ d. Commit your changes and push them to your remote repository on GitHub.
 
 Step 6 – Implement search functionality
 In this step, you will implement the search functionality. This step has multiple parts to it:
-a. Add a method search that accepts a single argument: name. Remember that the name is the key for
-each node in the BST.
+a. Add a method search that accepts a single argument: name. Remember that the name is the key for each node in the BST.
 b. Implement the following algorithm (recursively):
 1. If the root is None or the root node’s key matches the searched name, return it.
 2. If the key is less than the root’s key, search the left subtree.

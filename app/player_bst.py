@@ -27,10 +27,10 @@ class PlayerBST:
         if (node.player.name == tree_node.player.name):
             tree_node.player = node.player
         else:
-            if ( node.player.name < tree_node.player.name ):
+            if (node.player.name < tree_node.player.name):
                 if tree_node.left is None:
                     tree_node.left = node
-                    tree_node.root = root
+                    tree_node.left.root = root
                 else:
                     root = tree_node
                     tree_node = tree_node.left
@@ -38,7 +38,7 @@ class PlayerBST:
             else:
                 if tree_node.right is None:
                     tree_node.right = node
-                    tree_node.root = root
+                    tree_node.right.root = root
                 else:
                     root = tree_node
                     tree_node = tree_node.right
