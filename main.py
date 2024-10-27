@@ -39,14 +39,15 @@ player5 = Player("6","Daf")
 
 bst = PlayerBST()
 
+print(bst.search('Ohnj'))
 bst.insert(player0)
 bst.insert(player4)
-print(bst.root.right.player)
-print(bst.root.right.root.player)
 bst.insert(player1)
+print(bst.search('Fad'))
 bst.insert(player2)
 bst.insert(player3)
 bst.insert(player5)
+print(bst.search('Daf'))
 
 
 

@@ -34,3 +34,17 @@ class Test_Player_bst(unittest.TestCase):
         
         self.assertEqual(self.bst._root._right.player , self.player4)
 
+
+    def test_search_empty_tree(self):
+        
+        self.assertEqual(self.bst.search("Luke"), "Binary Tree Empty.")
+
+    def test_search_found(self):
+        self.bst.insert(self.player0)
+
+        self.assertEqual(self.bst.search("Luke"), self.player0)
+
+    def test_search_not_found(self):
+        self.bst.insert(self.player0)
+
+        self.assertEqual(self.bst.search("Luka"),"No match found.")

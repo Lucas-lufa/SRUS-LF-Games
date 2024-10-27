@@ -122,6 +122,7 @@ b. Implement the following algorithm (recursively):
 3. If the key is greater than the root’s key, search the right subtree.
 c. Create unit tests to test the behaviour of the BST’s search method.
 d. Commit your changes and push them to your remote repository on GitHub.
+https://stackoverflow.com/questions/11356168/return-in-recursive-function
 
 Step 7 – Optimise Binary Search Tree
 In the final step, you will optimise the BST by creating a Balanced BST. This step has multiple parts
