@@ -37,3 +37,6 @@ class PlayerBNode:
     @right.setter
     def right(self, node):
         self._right = node
+
+    def __str__(self):
+        return self._player.__str__

@@ -68,13 +68,22 @@ Uncontrolled Copy When Printed
 Step 1 – Knowledge Question (20-50 words)
 In your own words, describe what a Binary Search Tree (BST) is.
 
+ A binary tree is root node with no more than two leaf nodes. They can be joined together to make bigger trees, a leaf becomes a root for another tree. If they are constructed logically they can be searched through with less than and greater than.
+
 In addition, describe two important properties of a BST: depth and height. How are they different?
+
+ depth is going from the root node of the tree to a leaf counting the edges.
+ height is going from the leaf to the root node counting the edges.
 
 Step 2 – Knowledge Question (50-80 words)
 In your own words, describe how an algorithm to find an item in a Binary Search Tree works.
 
+ It matches a search value to the key value of a node. If the values don't match compares them to see if is lower or higher. If the search value is lower will look to the left node else will look to the right node. I have do this recursively. 
+
 Step 3 – Knowledge Question (20-60 words)
 In your own words, describe what a balanced BST is.
+
+ Balanced tree is where the root nodes have two leaf nodes. An unbalanced tree most of the root nodes have only one leaf that connects to other trees or the root of the tree one side has alot of nodes connected to it and the other has none of few.
 
 ### Step 4 – Prepare Binary Search Tree
 In this step, you will create the framework for a Binary Search Tree of Player objects. This step has
