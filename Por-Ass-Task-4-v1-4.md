@@ -72,8 +72,8 @@ In your own words, describe what a Binary Search Tree (BST) is.
 
 In addition, describe two important properties of a BST: depth and height. How are they different?
 
- depth is going from the root node of the tree to a leaf counting the edges.
- height is going from the leaf to the root node counting the edges.
+ depth is going from the root node of the tree to node counting the edges.
+ height is going from the farthest leaf to a node counting the edges.
 
 Step 2 – Knowledge Question (50-80 words)
 In your own words, describe how an algorithm to find an item in a Binary Search Tree works.
@@ -83,7 +83,7 @@ In your own words, describe how an algorithm to find an item in a Binary Search 
 Step 3 – Knowledge Question (20-60 words)
 In your own words, describe what a balanced BST is.
 
- Balanced tree is where the root nodes have two leaf nodes. An unbalanced tree most of the root nodes have only one leaf that connects to other trees or the root of the tree one side has alot of nodes connected to it and the other has none of few.
+ Balanced tree is where the absolute difference between heights of left and right sub tree is no more than one. Also for each node it's left and right sub trees are balanced.
 
 ### Step 4 – Prepare Binary Search Tree
 In this step, you will create the framework for a Binary Search Tree of Player objects. This step has
@@ -143,20 +143,37 @@ c. Now, perform the following steps until you run out of elements. Do this recur
 2. Get the middle of the right and make it the right child of the root from step b.
 d. Commit your changes and push them to your remote repository on GitHub.
 
-
-Portfolio Assessment Task 4
-Qualification national code and title ICT50220 Dip Advanced Programming
-Unit/s national code/s and title/s ICTPRG535 – Build advanced user interfaces
-ICTPRG547 – Apply advanced programming skills in another language
-RTO Code 52786 CRICOS Code: 00020G Current Template Version: February 2020
-Assessment task last updated: 29-07-21
-Folder location: Por-Asst-Task-4 v1.4.docx Page 5 of 5
-F122A12
-Uncontrolled Copy When Printed
 Step 8 – Knowledge Question
-With the newly balanced BST, how many steps does it take at most to find an existing item in the
-search tree?
+With the newly balanced BST, how many steps does it take at most to find an existing item in the search tree?
+ For a balanced binary search tree search is O(log n). My binary tree has six nodes and has a depth of two it will take three steps at maximin to find anything in the tree. O(log3n)
+ 
 Submitting your work
 ZIP your entire project into a single file.
 Make sure to remove the Python Virtual Environment folder (called venv or .venv) from the ZIP-file
 before uploading it into the Blackboard assessments area.
+
+Hi Lukas,
+
+Thank you for your submission. Here is my feedback:
+
+Step 1: Your answer regarding the depth and height of a node in a BST is not quite accurate. I understand it can be a bit confusing since both involve counting edges, but there are key differences that set them apart.
+
+Step 3: Your explanation of a balanced BST is incorrect. First, a BST has only one root node. It seems you were trying to describe the structure of a balanced BST by saying that each node can have two children, but this is not entirely correct. Please refer to the study material to clarify your understanding.
+
+Step 8: This question has not been answered.
+
+You made several commits (55), which demonstrate the incremental development of your code—well done!
+
+In following the instructions, you created the player_bnode.py script. However, the private instance attribute _root is not necessary here. You’ve correctly implemented the necessary setter and getter methods, which is great. Adding docstrings and comments would further enhance the readability and overall quality of your code.
+
+You implemented a main.py script which is good. However, I believe there is a technical issue. When I am printing your unbalanced BST, it is not arranging the player objects in proper sequence.
+
+I will also suggest you to to print the balanced BST named on name property. 
+
+I discussed these issues with you in the class and explained it. If you have any questions let me know.
+
+Keep up your good work!
+
+Thanks
+
+Tanmay

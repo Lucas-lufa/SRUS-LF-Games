@@ -39,4 +39,7 @@ class PlayerBNode:
         self._right = node
 
     def __str__(self):
-        return self._player.__str__
+        return f"Player( name = {self._player.name} uid = {self._player.uid})"
+    
+    def __repr__(self):
+        return f"Player( name = {self._player.name} uid = {self._player.uid})"
